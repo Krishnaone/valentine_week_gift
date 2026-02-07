@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5efe6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.day-card {
+  background: #fdfaf5;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.day-card:hover {
+  transform: scale(1.02);
+}
+
+.day-card.locked {
+  opacity: 0.6;
+}
+
+.day-card.active {
+  border: 1px solid #d6bfa6;
+}
+
+.day-title {
+  font-size: 18px;
+}
+
+.lock-message {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.day-card.show-message .lock-message {
+  opacity: 1;
+  max-height: 100px;
+}
+
